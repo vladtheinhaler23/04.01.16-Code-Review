@@ -1,6 +1,11 @@
 body {
   background-color: #555FA6;
 }
+#jumbotronHead {
+  margin-bottom: 25px;
+  color: #525880;
+  text-shadow: 1px 1px black;
+}
 ul{
   margin-top: 100px;
   margin-bottom: 50px;
@@ -20,8 +25,10 @@ li {
   line-height: 175px;
   border-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #525880;;
   opacity: 0.8;
+  color: #525880;
+  text-shadow: 1px 1px black;
 
 }
 .results {
@@ -43,12 +50,14 @@ li {
   min-height: 40px;
   min-width: 150px;
   color: white;
-  margin-top: 50px;
+  margin-top: 25px;
+  text-shadow: 1px 1px black;
 
 }
 .btn:hover {
   background-color: #3B3F5B;
   color: #D7D8DE;
+  text-shadow: 1px 1px black;
 }
 input {
  width: 400px;
