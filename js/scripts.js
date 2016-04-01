@@ -20,20 +20,19 @@ $(document).ready(function() {
     return results;
   }
 
-
-
-
-
-
-    //USER INTERFACE LOGIC
+  //USER INTERFACE LOGIC
 
     $("form").submit(function(event) {
       event.preventDefault();
       var userInput = parseInt($("#userNumber").val());
       var final = pingPong(userInput);
-      $("#result").text(final);
 
-      console.log(userInput);
+      for (index = 0; index <= final.length; index++){
+        $("#result").append("<p>" + final[index] + "</p>");
+      }
+
+
+      console.log(final);
 
  });
 });
