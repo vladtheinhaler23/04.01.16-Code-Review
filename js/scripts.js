@@ -36,11 +36,11 @@ $(document).ready(function() {
 
       for (index = 0; index <= final.length; index++){
         if ((index + 1) % 3 === 0 && (index + 1) % 5 === 0) {
-          $("#result").append("<li>PING PONG</li>");
+          $("#result").append("<li><img src=pingpong.gif></img></li>");
         } else if ( (index + 1) % 5 === 0) {
-          $("#result").append("<li>PING</li>");
+          $("#result").append("<li><img src=ping.gif></img></li>");
         } else if ( (index + 1) % 3 === 0 ) {
-          $("#result").append("<li>PONG</li>");
+          $("#result").append("<li><img src=pong.gif></img></li>");
         } else {
           $("#result").append("<li>" + final[index] + "</li>");
         }
@@ -51,7 +51,7 @@ $(document).ready(function() {
       console.log(final);
 
  });
- $(".results").click(function(event) {
+ $(".returnBtn").click(function(event) {
    event.preventDefault();
 
    location.reload();
