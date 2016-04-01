@@ -5,22 +5,29 @@ $(document).ready(function() {
   var pong = "pong";
 
   var pingPong = function(number) {
-    if (number != 0) {
-      for (i = 1; i <= number; i++) {
-      	if (  i % 3 === 0 && i % 5 === 0 ){
-        	results.push(ping + pong);
-        } else if ( i % 5 === 0) {
-        	results.push(pong);
-        } else if ( i % 3 === 0 ) {
-        	results.push(ping + pong);
-        } else {
-        	results.push(i);
-        }
-      }
-    } else {
-      alert("Please enter a number besides 0");
+    if (!number) {
+      alert("Please enter a valid number.");
       location.reload();
+    } else {
+      if (number > 0) {
+        for (i = 1; i <= number; i++) {
+          if (  i % 3 === 0 && i % 5 === 0 ){
+            results.push(ping + pong);
+          } else if ( i % 5 === 0) {
+            results.push(pong);
+          } else if ( i % 3 === 0 ) {
+            results.push(ping + pong);
+          } else {
+            results.push(i);
+          }
+        }
+
+      } else {
+        alert("Please enter a valid number.");
+        location.reload();
+      }
     }
+
 
       return results;
     }
@@ -34,7 +41,7 @@ $(document).ready(function() {
       $(".jumbotron").hide(2000);
       $(".results").show();
 
-      for (index = 0; index <= final.length; index++){
+      for (index = 0; index < final.length; index++){
         if ((index + 1) % 3 === 0 && (index + 1) % 5 === 0) {
           $("#result").append("<li><img src=pingpong.gif></img></li>");
         } else if ( (index + 1) % 5 === 0) {
