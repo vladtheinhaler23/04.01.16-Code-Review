@@ -22,7 +22,7 @@ _No known bugs! Reports Welcome!_
 
 ## Support and contact details
 
-_For any technical support, bug fixes or feature request, please email me at: JoshLogan32323@gmail.com _
+_For any technical support, bug fixes or feature request, please email me at: JoshLogan32323@gmail.com_
 
 ## Technologies Used
 
