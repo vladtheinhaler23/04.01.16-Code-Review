@@ -1,11 +1,18 @@
-ul {
-
-}
 
 li {
+  text-align: center;
   display: inline-block;;
   font-size: 30px;
   margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-right: 10px;
   background-color: red;
+  min-width: 150px;
+  min-height: 150px;
+  line-height: 150px;
+
+}
+.results {
+  display: none;
 }

@@ -26,6 +26,8 @@ $(document).ready(function() {
       event.preventDefault();
       var userInput = parseInt($("#userNumber").val());
       var final = pingPong(userInput);
+      $(".jumbotron").hide();
+      $(".results").show();
 
       for (index = 0; index <= final.length; index++){
         if ((index + 1) % 3 === 0 && (index + 1) % 5 === 0) {
@@ -44,4 +46,11 @@ $(document).ready(function() {
       console.log(final);
 
  });
+ $(".results").click(function(event) {
+   event.preventDefault();
+   $(".jumbotron").show();
+   $(".results").hide();
+   location.reload();
+
+});
 });
