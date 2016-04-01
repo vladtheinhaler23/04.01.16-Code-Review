@@ -9,9 +9,9 @@ $(document).ready(function() {
   	for (i = 1; i <= number; i++) {
     	if (  i % 3 === 0 && i % 5 === 0 ){
       	results.push(ping + pong);
-      } else if ( i % 3 === 0) {
+      } else if ( i % 5 === 0) {
       	results.push(pong);
-      } else if ( i % 3 === 0 ){
+      } else if ( i % 3 === 0 ) {
       	results.push(ping + pong);
       } else {
       	results.push(i);
@@ -28,9 +28,16 @@ $(document).ready(function() {
       var final = pingPong(userInput);
 
       for (index = 0; index <= final.length; index++){
-        $("#result").append("<p>" + final[index] + "</p>");
+        if ((index + 1) % 3 === 0 && (index + 1) % 5 === 0) {
+          $("#result").append("<li>PING PONG</li>");
+        } else if ( (index + 1) % 5 === 0) {
+          $("#result").append("<li>PING</li>");
+        } else if ( (index + 1) % 3 === 0 )
+          $("#result").append("<li>PONG</li>");
+        } else {
+        $("#result").append("<li>" + final[index + 1] "</li>");
       }
-
+    }
 
       console.log(final);
 
