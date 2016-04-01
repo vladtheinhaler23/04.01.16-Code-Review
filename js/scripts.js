@@ -32,12 +32,14 @@ $(document).ready(function() {
           $("#result").append("<li>PING PONG</li>");
         } else if ( (index + 1) % 5 === 0) {
           $("#result").append("<li>PING</li>");
-        } else if ( (index + 1) % 3 === 0 )
+        } else if ( (index + 1) % 3 === 0 ) {
           $("#result").append("<li>PONG</li>");
         } else {
-        $("#result").append("<li>" + final[index + 1] "</li>");
+          $("#result").append("<li>" + final[index] + "</li>");
+        }
       }
-    }
+
+
 
       console.log(final);
 
