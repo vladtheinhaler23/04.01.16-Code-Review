@@ -5,20 +5,25 @@ $(document).ready(function() {
   var pong = "pong";
 
   var pingPong = function(number) {
-
-  	for (i = 1; i <= number; i++) {
-    	if (  i % 3 === 0 && i % 5 === 0 ){
-      	results.push(ping + pong);
-      } else if ( i % 5 === 0) {
-      	results.push(pong);
-      } else if ( i % 3 === 0 ) {
-      	results.push(ping + pong);
-      } else {
-      	results.push(i);
+    if (number != 0) {
+      for (i = 1; i <= number; i++) {
+      	if (  i % 3 === 0 && i % 5 === 0 ){
+        	results.push(ping + pong);
+        } else if ( i % 5 === 0) {
+        	results.push(pong);
+        } else if ( i % 3 === 0 ) {
+        	results.push(ping + pong);
+        } else {
+        	results.push(i);
+        }
       }
+    } else {
+      alert("Please enter a number besides 0");
+      location.reload();
     }
-    return results;
-  }
+
+      return results;
+    }
 
   //USER INTERFACE LOGIC
 
@@ -26,7 +31,7 @@ $(document).ready(function() {
       event.preventDefault();
       var userInput = parseInt($("#userNumber").val());
       var final = pingPong(userInput);
-      $(".jumbotron").hide();
+      $(".jumbotron").hide(2000);
       $(".results").show();
 
       for (index = 0; index <= final.length; index++){
@@ -48,8 +53,7 @@ $(document).ready(function() {
  });
  $(".results").click(function(event) {
    event.preventDefault();
-   $(".jumbotron").show();
-   $(".results").hide();
+
    location.reload();
 
 });

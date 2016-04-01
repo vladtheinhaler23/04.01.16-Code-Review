@@ -9,24 +9,27 @@
     <title>PING PONG</title>
   </head>
   <body>
-    <dic class = "container">
+    <div class = "container">
       <div class = "jumbotron">
         <h1>Ping Pong to a number of your choosing.</h1>
         <form>
          <div class="form-group">
-           <label for="userNumber">Enter a Number!</label>
-           <input id="userNumber" type="text">
+           <input id="userNumber" type="text" placeholder="Please enter your number here..." required>
          </div>
+
 
          <button type="submit" class="btn">Ping Pong</button>
         </form>
       </div>
     </div>
+    <div class="container">
     <div class="results">
+      <button type="click" class="btn">Ping Pong Again!</button>
       <ul id="result">
 
       </ul>
       <button type="click" class="btn">Ping Pong Again!</button>
+    </div>
     </div>
   </body>
 </html>
